@@ -40,7 +40,7 @@ public class ClothRepository {
 	};
 	
 	/**
-	 * 受け取った性別と色に合致する服の情報をリストとして返す検索メソッド
+	 * 受け取った性別と色に合致する服の情報をリストとして返す検索メソッド.
 	 * 
 	 * @param gender 性別
 	 * @param color 色
