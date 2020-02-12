@@ -8,8 +8,8 @@
 	<h1>衣類検索</h1>
 	<form action="search-clothes.html" th:action="@{/cloth/search}" method="post">
 		<div th:each="gender:${genderMap}">
-			<input type="radio" name="gender" th:value="${gender.key}" checked>
-			<span th:text="${gender.value}">man</span>
+			<input th:id="${gender.value}" type="radio" name="gender" th:value="${gender.key}" th:checked="${gender.key == 0}">
+			<label th:for="${gender.value}"><span th:text="${gender.value}">man</span></label>
 		</div>
 		<div>
 			<select name="color">
