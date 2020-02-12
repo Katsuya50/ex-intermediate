@@ -1,12 +1,24 @@
 package com.example.domain;
 
+/**
+ * 野球チームのドメイン.
+ * 
+ * @author katsuya.fujishima
+ *
+ */
 public class Team {
 	
+	/** 野球チームのid */
 	private Integer id;
+	/** 野球チームのリーグ名 */
 	private String leagueName;
+	/** 野球チームのチーム名 */
 	private String teamName;
+	/** 野球チームの本拠地 */
 	private String headquarters;
+	/** 野球チームの発足年月日 */
 	private String inaguration;
+	/** 野球チームの歴史 */
 	private String history;
 	
 	public Integer getId() {
