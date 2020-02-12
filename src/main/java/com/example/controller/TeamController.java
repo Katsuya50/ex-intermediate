@@ -46,7 +46,7 @@ public class TeamController {
 	@RequestMapping("/detail")
 	public String detail(Integer id, Model model) {
 		Team team = new Team();
-		team = service.findAll().get(id);
+		team = service.findAll().get(id - 1);
 		model.addAttribute("team", team);
 		return "detail";
 	}
