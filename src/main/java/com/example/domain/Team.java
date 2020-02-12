@@ -17,7 +17,7 @@ public class Team {
 	/** 野球チームの本拠地 */
 	private String headquarters;
 	/** 野球チームの発足年月日 */
-	private String inaguration;
+	private String inauguration;
 	/** 野球チームの歴史 */
 	private String history;
 	
@@ -45,11 +45,11 @@ public class Team {
 	public void setHeadquarters(String headquarters) {
 		this.headquarters = headquarters;
 	}
-	public String getInaguration() {
-		return inaguration;
+	public String getInauguration() {
+		return inauguration;
 	}
-	public void setInaguration(String inaguration) {
-		this.inaguration = inaguration;
+	public void setInauguration(String inauguration) {
+		this.inauguration = inauguration;
 	}
 	public String getHistory() {
 		return history;
@@ -61,7 +61,7 @@ public class Team {
 	@Override
 	public String toString() {
 		return "Team [id=" + id + ", leagueName=" + leagueName + ", teamName=" + teamName + ", headquarters="
-				+ headquarters + ", inaguration=" + inaguration + ", history=" + history + "]";
+				+ headquarters + ", inauguration=" + inauguration + ", history=" + history + "]";
 	}
 
 }

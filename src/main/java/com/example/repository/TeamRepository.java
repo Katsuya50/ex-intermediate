@@ -31,7 +31,7 @@ public class TeamRepository {
 		team.setLeagueName(rs.getString("league_name"));
 		team.setTeamName(rs.getString("team_name"));
 		team.setHeadquarters(rs.getString("headquarters"));
-		team.setInaguration(rs.getString("inaguration"));
+		team.setInauguration(rs.getString("inauguration"));
 		team.setHistory(rs.getString("history"));
 		return team;
 	};
@@ -42,7 +42,7 @@ public class TeamRepository {
 	 * @return 全チームの情報が格納されたリスト
 	 */
 	public List<Team> findAll() {
-		String sql = "SELECT id, league_name, team_name, headquarters, inaguration, history "
+		String sql = "SELECT id, league_name, team_name, headquarters, inauguration, history "
 					+ "FROM " + TABLE_NAME + " ORDER BY id";
 		List<Team> teamList = template.query(sql, TEAM_ROW_MAPPER);
 		return teamList;
