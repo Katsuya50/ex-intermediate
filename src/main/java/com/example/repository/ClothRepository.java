@@ -24,7 +24,7 @@ public class ClothRepository {
 	private NamedParameterJdbcTemplate template;
 	
 	/**	テーブル名 */
-	private static final String TABLE_NAME = "cloths";
+	private static final String TABLE_NAME = "clothes";
 	
 	/**	ドメインに格納して返すローマッパー */
 	private static final RowMapper<Cloth> CLOTH_ROW_MAPPER = (rs, i) -> {
