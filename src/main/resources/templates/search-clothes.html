@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h1>衣類検索</h1>
-	<form action="search-cloths.html" th:action="@{/cloth/search}" method="post">
+	<form action="search-clothes.html" th:action="@{/cloth/search}" method="post">
 		<div th:each="gender:${genderMap}">
 			<input type="radio" name="gender" th:value="${gender.key}" checked>
 			<span th:text="${gender.value}">man</span>
@@ -29,7 +29,7 @@
 		</tr>
 		<tr>
 			<td>価格</td>
-			<td th:text="${cloth.price}">price</td>
+			<td th:text="${#numbers.formatInteger(cloth.price, 1, 'COMMA')}">price</td>
 		</tr>
 	</table>
 </body>

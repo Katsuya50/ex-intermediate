@@ -44,7 +44,7 @@ public class ClothController {
 		colorList.add("黄");
 		model.addAttribute("genderMap", genderMap);
 		model.addAttribute("colorList", colorList);
-		return "search-cloths";
+		return "search-clothes";
 	}
 	
 	/**
