@@ -23,12 +23,21 @@ public class TeamService {
 	private TeamRepository repository;
 	
 	/**
-	 * 野球チームの全件検索メソッド.
+	 * 野球チームの全件検索処理.
 	 * 
 	 * @return 全チームの情報が格納されたリスト
 	 */
 	public List<Team> findAll() {
 		return repository.findAll();
+	}
+	
+	/**
+	 * 野球チームのidによる一件検索処理.
+	 * 
+	 * @return idが一致したチームの情報
+	 */
+	public Team findById(Integer id) {
+		return repository.findById(id);
 	}
 
 }
