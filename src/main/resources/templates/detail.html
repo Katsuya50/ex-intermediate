@@ -5,6 +5,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<span class="title">球団名</span><br>
+	<span th:text="${team.teamName}">giants</span>
+	<span class="title">本拠地</span><br>
+	<span th:text="${team.headquarters}">tokyoDome</span>
+	<span class="title">発足</span><br>
+	<span th:text="${team.inauguration}">**/**/**</span>
+	<span class="title">歴史</span><br>
+	<div th:text="${team.history}">club</div>
+	<form action="list.html" th:action="/">
+		<button>戻る</button>
+	</form>
 </body>
 </html>
