@@ -31,7 +31,7 @@ public class TeamController {
 	 */
 	@RequestMapping("/")
 	public String index(Model model) {
-		List<Team> teamList = service.showList()
+		List<Team> teamList = service.showList();
 		model.addAttribute("teamList", teamList);
 		return "list";
 	}
