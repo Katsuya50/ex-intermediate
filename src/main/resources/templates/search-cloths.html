@@ -5,6 +5,32 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<h1>衣類検索</h1>
+	<form action="search-cloths.html" th:action="@{/cloth/search}" method="post">
+		<div th:each="gender:${genderMap}">
+			<input type="radio" name="gender" th:value="${gender.key}" checked>
+			<span th:text="${gender.value}">man</span>
+		</div>
+		<div>
+			<select name="color">
+				<option th:each="color:${colorList}" th:value="${color}" th:text="${color}">yellow</option>
+			</select>
+		</div>
+		<button>検索</button>
+	</form>
+	<table border="1" th:each="cloth:${clothList}">
+		<tr>
+			<td>ジャンル</td>
+			<td th:text="${cloth.genre}">genre</td>
+		</tr>
+		<tr>
+			<td>サイズ</td>
+			<td th:text="${cloth.size}">size</td>
+		</tr>
+		<tr>
+			<td>価格</td>
+			<td th:text="${cloth.price}">price</td>
+		</tr>
+	</table>
 </body>
 </html>
