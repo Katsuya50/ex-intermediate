@@ -8,6 +8,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.domain.Cloth;
@@ -58,6 +59,9 @@ public class ClothController {
 	@RequestMapping("/search")
 	public String search(Integer gender, String color, Model model) {
 		List<Cloth> clothList = service.SearchByGenderAndColor(gender, color);
+		if(clothList == null) {
+			model.addAttribute("errorMessage", "条件に一致する衣類がありません。");
+		}
 		model.addAttribute("clothList", clothList);
 		return index(model);
 	}
