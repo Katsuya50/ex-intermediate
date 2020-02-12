@@ -36,7 +36,7 @@ public class TeamService {
 	 * 
 	 * @return idが一致したチームの情報
 	 */
-	public Team ShowDetail(Integer id) {
+	public Team showDetail(Integer id) {
 		return repository.findById(id);
 	}
 
