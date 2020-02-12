@@ -22,7 +22,8 @@ public class TeamRepository {
 		team.setTeamName(rs.getString("team_name"));
 		team.setHeadquarters(rs.getString("headquarters"));
 		team.setInaguration(rs.getString("inaguration"));
-		
+		team.setHistory(rs.getString("history"));
+		return team;
 	};
 
 }
