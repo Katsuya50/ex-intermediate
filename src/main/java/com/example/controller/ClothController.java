@@ -58,7 +58,7 @@ public class ClothController {
 	@RequestMapping("/search")
 	public String search(Integer gender, String color, Model model) {
 		List<Cloth> clothList = service.SearchByGenderAndColor(gender, color);
-		if(clothList == null) {
+		if(clothList.size() == 0) {
 			model.addAttribute("errorMessage", "条件に一致する衣類がありません。");
 		}
 		model.addAttribute("clothList", clothList);

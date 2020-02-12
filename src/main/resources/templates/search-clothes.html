@@ -17,7 +17,8 @@
 			</select>
 		</div>
 		<button>検索</button>
-	</form>
+	</form><br>
+	<span th:text="${errorMessage}">error</span>
 	<table border="1" th:each="cloth:${clothList}">
 		<tr>
 			<td>ジャンル</td>
