@@ -8,17 +8,17 @@ package com.example.domain;
  */
 public class Team {
 	
-	/** 野球チームのid */
+	/** id */
 	private Integer id;
-	/** 野球チームのリーグ名 */
+	/** リーグ名 */
 	private String leagueName;
-	/** 野球チームのチーム名 */
+	/** チーム名 */
 	private String teamName;
-	/** 野球チームの本拠地 */
+	/** 本拠地 */
 	private String headquarters;
-	/** 野球チームの発足年月日 */
+	/** 発足年月日 */
 	private String inauguration;
-	/** 野球チームの歴史 */
+	/** 歴史 */
 	private String history;
 	
 	public Integer getId() {
