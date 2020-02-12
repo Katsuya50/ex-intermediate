@@ -17,7 +17,7 @@ import com.example.service.HotelService;
  *
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping("/hotel")
 public class HotelController {
 	
 	@Autowired
@@ -28,7 +28,7 @@ public class HotelController {
 	 * 
 	 * @return 検索画面
 	 */
-	@RequestMapping("/")
+	@RequestMapping("")
 	public String index() {
 		return "search";
 	}
