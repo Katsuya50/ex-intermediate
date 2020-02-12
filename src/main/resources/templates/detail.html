@@ -3,16 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+	.title{
+		font-weight: bold;
+	}
+	.item{
+		font-family: sans-serif;
+		font-size: 18px;
+	}
+</style>
 </head>
 <body>
 	<span class="title">球団名</span><br>
-	<span th:text="${team.teamName}">giants</span>
+	<span class="item" th:text="${team.teamName}">giants</span><br>
 	<span class="title">本拠地</span><br>
-	<span th:text="${team.headquarters}">tokyoDome</span>
+	<span class="item" th:text="${team.headquarters}">tokyoDome</span><br>
 	<span class="title">発足</span><br>
-	<span th:text="${team.inauguration}">**/**/**</span>
-	<span class="title">歴史</span><br>
-	<div th:text="${team.history}">club</div>
+	<span class="item" th:text="${team.inauguration}">**/**/**</span><br>
+	<span class="title">歴史</span>
+	<pre class="item" th:text="${team.history}">club</pre>
 	<form action="list.html" th:action="@{/}">
 		<button>戻る</button>
 	</form>
