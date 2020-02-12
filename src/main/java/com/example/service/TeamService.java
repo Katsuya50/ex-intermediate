@@ -27,7 +27,7 @@ public class TeamService {
 	 * 
 	 * @return 全チームの情報が格納されたリスト
 	 */
-	public List<Team> findAll() {
+	public List<Team> showList() {
 		return repository.findAll();
 	}
 	
@@ -36,7 +36,7 @@ public class TeamService {
 	 * 
 	 * @return idが一致したチームの情報
 	 */
-	public Team findById(Integer id) {
+	public Team ShowDetail(Integer id) {
 		return repository.findById(id);
 	}
 
