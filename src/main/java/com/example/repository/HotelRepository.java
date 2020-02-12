@@ -45,9 +45,9 @@ public class HotelRepository {
 	 * @param price 価格
 	 * @return ホテル情報のリスト
 	 */
-	public List<Hotel> findByPrice(Integer price) {
+	public List<Hotel> findByLessThanPrice(Integer price) {
 		String sql = "SELECT id, area_name, hotel_name, address, nearest_station, price, parking "
-					+ "FROM " + TABLE_NAME + " WHERE price <= :price ORDER BY id";
+					+ "FROM " + TABLE_NAME + " WHERE price <= :price ORDER BY price DESC";
 		SqlParameterSource param = new MapSqlParameterSource().addValue("price", price);
 		List<Hotel> hotelList = templete.query(sql, param, HOTEL_ROW_MAPPER);
 		return hotelList;
@@ -59,8 +59,8 @@ public class HotelRepository {
 	 * @return ホテルの全件リスト
 	 */
 	public List<Hotel> findAll() {
-		String sql = "SELECT id, area_name, hotel_name, address, nearest_station, price, parking "
-				+ "FROM " + TABLE_NAME + " ORDER BY id";
+		String sql = "SELECT id, area_name, hotel_name, address, nearest_station, c, parking "
+				+ "FROM " + TABLE_NAME + " ORDER BY price DESC";
 	List<Hotel> hotelList = templete.query(sql, HOTEL_ROW_MAPPER);
 	return hotelList;
 	}

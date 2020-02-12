@@ -33,6 +33,6 @@ public class HotelService {
 		if(price == null) {
 			return repository.findAll();
 		}
-		return repository.findByPrice(price);
+		return repository.findByLessThanPrice(price);
 	}
 }
