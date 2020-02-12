@@ -35,8 +35,8 @@ public class ClothController {
 	@RequestMapping("")
 	public String index(Model model) {
 		Map<Integer, String> genderMap = new LinkedHashMap<>();
-		genderMap.put(0, "男");
-		genderMap.put(1, "女");
+		genderMap.put(0, "Man");
+		genderMap.put(1, "Woman");
 		List<String> colorList = new ArrayList<>();
 		colorList.add("赤");
 		colorList.add("青");
