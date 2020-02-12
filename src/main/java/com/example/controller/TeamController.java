@@ -35,5 +35,20 @@ public class TeamController {
 		model.addAttribute("teamList", teamList);
 		return "list";
 	}
+	
+	/**
+	 * 受け取ったidに紐づいたチーム詳細画面にフォワードするメソッド.
+	 * 
+	 * @param id チームid
+	 * @param model リクエストスコープ
+	 * @return チーム詳細画面
+	 */
+	@RequestMapping("/detail")
+	public String detail(Integer id, Model model) {
+		Team team = new Team();
+		team = service.findAll().get(id);
+		model.addAttribute("team", team);
+		return "detail";
+	}
 
 }
