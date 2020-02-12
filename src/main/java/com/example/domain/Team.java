@@ -1,14 +1,12 @@
 package com.example.domain;
 
-import java.time.LocalDate;
-
 public class Team {
 	
 	private Integer id;
 	private String leagueName;
 	private String teamName;
 	private String headquarters;
-	private LocalDate inaguration;
+	private String inaguration;
 	private String history;
 	
 	public Integer getId() {
@@ -35,10 +33,10 @@ public class Team {
 	public void setHeadquarters(String headquarters) {
 		this.headquarters = headquarters;
 	}
-	public LocalDate getInaguration() {
+	public String getInaguration() {
 		return inaguration;
 	}
-	public void setInaguration(LocalDate inaguration) {
+	public void setInaguration(String inaguration) {
 		this.inaguration = inaguration;
 	}
 	public String getHistory() {
