@@ -50,6 +50,12 @@ public class TeamRepository {
 		return teamList;
 	}
 	
+	/**
+	 * idによる一件検索をするメソッド.
+	 * 
+	 * @param id チームid
+	 * @return idが一致したチーム
+	 */
 	public Team findById(Integer id) {
 		String sql = "SELECT id, league_name, team_name, headquarters, inauguration, history "
 					+ "FROM " + TABLE_NAME + " WHERE id = :id";
